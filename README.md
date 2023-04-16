@@ -31,7 +31,9 @@ LRCL-LROP
 - "LROP" (Henri Coandă International Airport): 44.5711° N, 26.0858° E, 106 meters altitude
 
 *Notes*
-- In project 'examples' package and sub-packages you can finde some examples how to work with files, serializable and json. Package workTruckMonitoring contains a litle bit more complex example but you do not need to implement the application in the same way (no need to have repository, service, etc). 
+- In project 'examples' package and sub-packages you can find some examples how to work with files, serializable and json. Package workTruckMonitoring contains a litle bit more complex example but you do not need to implement the application in the same way (no need to have repository, service, etc). For this particular case objects are saved as json object but you can use serializable mechanism (see serializableJson and serializableObject exampels);
+- In project 'airways' package you can find a sample implementation of function to calculate distance between 2 geographical points; 
+- In project 'airways' package you can find a suggested Waypoint object structure which cane be extended in order to fully implement the application;
 
 ## Exercise 2 - Use case diagram
 
