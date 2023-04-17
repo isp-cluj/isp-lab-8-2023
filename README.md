@@ -17,7 +17,7 @@ The application should allow users to create and delete routes.
 - Each waypoint should have a name, a latitude, a longitude, and an altitude, which the user should be able to specify when creating a new waypoint added to a route.
 - The application should calculate the total distance of a route by summing the distances between each consecutive pair of waypoints using the Haversine formula (implementation example https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/).
 - Each route should be saved in a separate folder, and each waypoint should be saved as a separate file using serializable mechanism or json mechanism.
-- For simplification each route will be saved in a folder with the same name (as teh route)
+- For simplification each route will be saved in a folder with the same name (as the route)
 - The user should be able to load a route from a folder and diplay total distance and list of waypoints
 - The user should be able to delete a route (delete a folder content and folder itself containig the route)
 - The user should be able to list all available routes (dislay name of the foldeders containing the routes)
