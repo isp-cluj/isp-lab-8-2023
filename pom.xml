@@ -18,7 +18,7 @@
             <email>student@emailaddress.com</email>
         </developer>
     </developers>
-	
+
     <organization>
         <name>Technical University of Cluj-Napoca</name>
     </organization>
@@ -30,7 +30,8 @@
         <!-- name appended to standard jar name to indicate shaded/executable version -->
         <shadedClassifierName>executable</shadedClassifierName>
         <junit-version>4.12</junit-version>
-        <java.compile-verison>1.8</java.compile-verison>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <slf4j-version>1.7.25</slf4j-version>
     </properties>
 
@@ -81,12 +82,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <scope>compile</scope>
+            <version>1.18.32</version>
+            <scope>provided</scope>
         </dependency>
+
 
 
     </dependencies>
@@ -94,7 +97,7 @@
     <build>
         <!-- Goals may be set in the IDE or the pom -->
         <!-- IDE goals override the defaultGoal -->
-        <defaultGoal>clean compile package exec:java</defaultGoal> 
+        <defaultGoal>clean compile package exec:java</defaultGoal>
         <plugins>
             <plugin>
                 <!-- Select the version of the compiler and binary file -->
@@ -125,7 +128,7 @@
                         </goals>
                         <configuration>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>${shadedClassifierName}</shadedClassifierName> 
+                            <shadedClassifierName>${shadedClassifierName}</shadedClassifierName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer
@@ -148,7 +151,7 @@
                         <id>default-cli</id>
                         <goals>
                             <!-- java runs the code from the main class -->
-                            <goal>java</goal> 
+                            <goal>java</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -167,7 +170,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
             </plugin>
-			
+
 			<plugin>
 				<groupId>com.rimerosolutions.maven.plugins</groupId>
 				<artifactId>wrapper-maven-plugin</artifactId>
