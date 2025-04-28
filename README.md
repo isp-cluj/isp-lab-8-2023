@@ -18,9 +18,9 @@ The application should allow users to create and delete routes.
 - The application should calculate the total distance of a route by summing the distances between each consecutive pair of waypoints using the Haversine formula (implementation example https://www.geeksforgeeks.org/haversine-formula-to-find-distance-between-two-points-on-a-sphere/).
 - Each route should be saved in a separate folder, and each waypoint should be saved as a separate file using serializable mechanism or json mechanism.
 - For simplification each route will be saved in a folder with the same name (as the route)
-- The user should be able to load a route from a folder and diplay total distance and list of waypoints
-- The user should be able to delete a route (delete a folder content and folder itself containig the route)
-- The user should be able to list all available routes (dislay name of the foldeders containing the routes)
+- The user should be able to load a route from a folder and display total distance and list of waypoints
+- The user should be able to delete a route (delete a folder content and folder itself containing the route)
+- The user should be able to list all available routes (display name of the folders containing the routes)
 
 For testing you can use this example route:
 LRCL-LROP 
@@ -31,16 +31,16 @@ LRCL-LROP
 - "LROP" (Henri Coandă International Airport): 44.5711° N, 26.0858° E, 106 meters altitude
 
 *Notes*
-- In project 'examples' package and sub-packages you can find some examples how to work with files, serializable and json. Package workTruckMonitoring contains a litle bit more complex example but you do not need to implement the application in the same way (no need to have repository, service, etc). For this particular case objects are saved as json object but you can use serializable mechanism (see serializableJson and serializableObject exampels);
+- In project 'examples' package and sub-packages you can find some examples how to work with files, serializable and json. Package workTruckMonitoring contains a little bit more complex example, but you do not need to implement the application in the same way (no need to have repository, service, etc.). For this particular case objects are saved as jsons, but you can use either serializable mechanism (see serializableJson and serializableObject examples);
 - In project 'airways' package you can find a sample implementation of function to calculate distance between 2 geographical points; 
 - In project 'airways' package you can find a suggested Waypoint object structure which cane be extended in order to fully implement the application;
 
 ## Exercise 2 - Use case diagram
 
-Create UML Use-Case diagram for the aplicaiton.
+Create UML Use-Case diagram for the application.
 ![Exercise 2 image](docs/ex1.jpg)
 
 ## Exercise 3 - Class diagram
 
-Create UML Class diagram for the aplicaiton.
+Create UML Class diagram for the application.
 ![Exercise 3 image](docs/ex1.jpg)
