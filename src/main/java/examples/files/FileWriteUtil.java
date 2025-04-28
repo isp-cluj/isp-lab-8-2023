@@ -11,58 +11,59 @@ import java.nio.file.Paths;
 import java.util.List;
 
 /**
- *
  * @author mihai.hulea
  */
 public class FileWriteUtil {
-    
+
     /**
      * Use Streams when you are dealing with raw data
+     *
      * @param data
      */
     public static void writeUsingOutputStream(String data, String fileName) throws IOException {
-    
+
         //use java 1.7 try with resources (os stream is automatically closed internaly
-        try(OutputStream os = new FileOutputStream(new File(fileName))) {         
+        try (OutputStream os = new FileOutputStream(new File(fileName))) {
             os.write(data.getBytes(), 0, data.length());
         }
     }
-    
-      /**
+
+    /**
      * Use Files class from Java 1.7 to write files, internally uses OutputStream
+     *
      * @param data
      */
     public static void writeUsingFiles(String data, String fileName) throws IOException {
-            Files.write(Paths.get(fileName), data.getBytes());
+        Files.write(Paths.get(fileName), data.getBytes());
     }
-    
+
     /**
      * Use FileWriter when writing small amount of data.
-     * 
+     *
      * @param data
      */
     public static void writeUsingFileWriter(String data, String fileName) throws IOException {
         File file = new File(fileName);
-        
-        try(FileWriter fr = new FileWriter(file)){    
+
+        try (FileWriter fr = new FileWriter(file)) {
             fr.write(data);
-        }  
+        }
     }
-    
+
     /**
      * Use BufferedWriter when number of write operations are more
      * It uses internal buffer to reduce real IO operations and saves time
-     * @param data
-     * @param noOfLines
+     *
+     * @param lines    - the list of lines to write in the file
+     * @param fileName - the file name
      */
     public static void writeUsingBufferedWriter(List<String> lines, String fileName) throws IOException {
         File file = new File(fileName);
-        try(BufferedWriter br = new BufferedWriter(new FileWriter(file))){
-            for(String line: lines){
-                br.write(line+System.getProperty("line.separator"));
+        try (BufferedWriter br = new BufferedWriter(new FileWriter(file))) {
+            for (String line : lines) {
+                br.write(line + System.getProperty("line.separator"));
             }
             br.flush();
-        }        
+        }
     }
-    
 }
