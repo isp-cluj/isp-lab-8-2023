@@ -5,8 +5,6 @@
  */
 package examples.workTrucksMonitoring.model;
 
-import lombok.*;
-
 import java.util.Objects;
 
 /**
@@ -14,16 +12,43 @@ import java.util.Objects;
  * @author mihai.hulea
  */
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
-@AllArgsConstructor(access = AccessLevel.PUBLIC)
-@ToString
 public class Truck {
-    @Getter @Setter
     private double latitude;
-    @Getter @Setter
     private double longitudel;
-    @Getter @Setter
     private String plateNumber;
+
+    public Truck() {
+    }
+
+    public Truck(double latitude, double longitudel, String plateNumber) {
+        this.latitude = latitude;
+        this.longitudel = longitudel;
+        this.plateNumber = plateNumber;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitudel() {
+        return longitudel;
+    }
+
+    public void setLongitudel(double longitudel) {
+        this.longitudel = longitudel;
+    }
+
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
+    }
 
     @Override
     public int hashCode() {
@@ -48,6 +73,6 @@ public class Truck {
         }
         return true;
     }
-        
-    
+
+
 }

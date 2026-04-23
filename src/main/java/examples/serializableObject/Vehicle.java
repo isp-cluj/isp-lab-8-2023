@@ -5,26 +5,55 @@
  */
 package examples.serializableObject;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
-
 import java.io.Serializable;
 
 
-//!!! We use lombok project to generate constructor 
-@AllArgsConstructor(access = AccessLevel.PUBLIC)
-@ToString
-public class Vehicle implements Serializable{
-   
-    @Getter
+//!!! We use lombok project to generate constructor
+public class Vehicle implements Serializable {
     private String plateNumber;
-    @Getter
     private String latitude;
-    @Getter
     private String longitude;
-    @Getter
     private int speed;
-    
+
+    public Vehicle() {
+    }
+
+    public Vehicle(String plateNumber, String latitude, String longitude, int speed) {
+        this.plateNumber = plateNumber;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.speed = speed;
+    }
+
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 }
