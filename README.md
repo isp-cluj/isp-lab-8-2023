@@ -38,9 +38,9 @@ LRCL-LROP
 ## Exercise 2 - Use case diagram
 
 Create UML Use-Case diagram for the application.
-![Exercise 2 image](docs/ex1.jpg)
+![Exercise 2 image](docs/ex2.jpg)
 
 ## Exercise 3 - Class diagram
 
 Create UML Class diagram for the application.
-![Exercise 3 image](docs/ex1.jpg)
+![Exercise 3 image](docs/ex3.jpg)
